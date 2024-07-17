@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: phibetasigma1914
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: node backend/index.js
+    envVars:
+      - key: MONGO_URI
+        value: your_mongodb_connection_string
